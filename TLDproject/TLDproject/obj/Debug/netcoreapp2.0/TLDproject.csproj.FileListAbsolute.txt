@@ -1,0 +1,11 @@
+/Users/Dane/Desktop/TLDproject/TLDproject/bin/Debug/netcoreapp2.0/TLDproject.deps.json
+/Users/Dane/Desktop/TLDproject/TLDproject/bin/Debug/netcoreapp2.0/TLDproject.runtimeconfig.json
+/Users/Dane/Desktop/TLDproject/TLDproject/bin/Debug/netcoreapp2.0/TLDproject.runtimeconfig.dev.json
+/Users/Dane/Desktop/TLDproject/TLDproject/bin/Debug/netcoreapp2.0/TLDproject.dll
+/Users/Dane/Desktop/TLDproject/TLDproject/bin/Debug/netcoreapp2.0/TLDproject.pdb
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.csprojResolveAssemblyReference.cache
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.csproj.CoreCompileInputs.cache
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.AssemblyInfoInputs.cache
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.AssemblyInfo.cs
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.dll
+/Users/Dane/Desktop/TLDproject/TLDproject/obj/Debug/netcoreapp2.0/TLDproject.pdb
