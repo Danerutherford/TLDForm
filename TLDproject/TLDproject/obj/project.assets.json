@@ -28530,11 +28530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Dane/Desktop/TLDproject/TLDproject/TLDproject.csproj",
+      "projectUniqueName": "/Users/Dane/Documents/GitHub/TLDForm/TLDproject/TLDproject/TLDproject.csproj",
       "projectName": "TLDproject",
-      "projectPath": "/Users/Dane/Desktop/TLDproject/TLDproject/TLDproject.csproj",
+      "projectPath": "/Users/Dane/Documents/GitHub/TLDForm/TLDproject/TLDproject/TLDproject.csproj",
       "packagesPath": "/Users/Dane/.nuget/packages/",
-      "outputPath": "/Users/Dane/Desktop/TLDproject/TLDproject/obj",
+      "outputPath": "/Users/Dane/Documents/GitHub/TLDForm/TLDproject/TLDproject/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
