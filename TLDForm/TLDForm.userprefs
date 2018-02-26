@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{4DDB2EF7-CF36-47FE-80DB-2B55A544BECE}|">
+  <MonoDevelop.Ide.ItemProperties.TLDForm PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TLDForm/Views/Home/PastVersions.cshtml">
+    <Files>
+      <File FileName="TLDForm/Models/AccountViewModels.cs" Line="1" Column="1" />
+      <File FileName="TLDForm/Models/IdentityModels.cs" Line="1" Column="1" />
+      <File FileName="TLDForm/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="TLDForm/Views/Home/OrderHistory.cshtml" Line="1" Column="1" />
+      <File FileName="TLDForm/Views/Home/PastVersions.cshtml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
