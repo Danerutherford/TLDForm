@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace TLDForm.Controllers
-{   [Authorize]
+{   //[Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
