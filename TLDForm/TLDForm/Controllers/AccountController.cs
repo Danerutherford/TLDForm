@@ -137,7 +137,7 @@ namespace TLDForm.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Authorize()
+        public ActionResult Register()
         {
             return View();
         }
@@ -147,7 +147,7 @@ namespace TLDForm.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Authorize(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
