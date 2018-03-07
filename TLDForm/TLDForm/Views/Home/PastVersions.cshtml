@@ -1,7 +1,44 @@
 ﻿@{
-    ViewBag.Title = "Past Versions.";
+    ViewBag.Title = "Past Versions";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Past versions of the form will be accessible here for the Admin.</p>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Form ID</th>
+            <th scope="col">Edit Date</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <th scope="row">1</th>
+            <td>01/12/18</td>
+           
+            <td>
+                <button type="button" class="btn btn-default">Select</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>02/11/18</td>
+            
+            <td>
+                <button type="button" class="btn btn-default">Select</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>03/06/18</td>
+            
+            <td>
+                <button type="button" class="btn btn-default">Select</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
