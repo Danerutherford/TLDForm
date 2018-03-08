@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Order History for " + User.Identity.GetUserName();
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Order No.</th>
+            <th scope="col">Date</th>
+            <th scope="col">No. of Badges</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>03/06/18</td>
+            <td>14</td>
+            <td><button type="button" class="btn btn-default">View Order</button></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>02/10/18</td>
+            <td>1000</td>
+            <td><button type="button" class="btn btn-default">View Order</button></td>
+
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>02/01/18</td>
+            <td>2</td>
+            <td><button type="button" class="btn btn-default">View Order</button></td>
+
+        </tr>
+
+    </tbody>
+</table>
