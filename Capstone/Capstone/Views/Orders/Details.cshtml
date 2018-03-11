@@ -1,0 +1,138 @@
+﻿@model Capstone.Models.OrderModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNbr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNbr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDNbr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDNbr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HolderType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HolderType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Neutron)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neutron)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeriesColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeriesColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreqColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreqColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeUse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.orderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
