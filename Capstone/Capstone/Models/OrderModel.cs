@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+using System.Data.Entity;
 
 namespace Capstone.Models
 {
     public class OrderModel
     {
+        [Key]
+        public int orderId { get; set; }
         public int AccountNbr { get; set; }
 
         public string AccountName1 { get; set; }
@@ -41,4 +44,10 @@ namespace Capstone.Models
 
         public string BadgeUse { get; set; }
     }
+
+    public class OrderDBContext: DbContext
+    {
+        public DbSet<OrderModel> Orders { get; set; }
+    }
+
 }
