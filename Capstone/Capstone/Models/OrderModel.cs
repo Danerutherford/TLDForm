@@ -45,6 +45,8 @@ namespace Capstone.Models
         public string FreqColor { get; set; }
 
         public string BadgeUse { get; set; }
+
+      
     }
 
     public class OrderDBContext: DbContext

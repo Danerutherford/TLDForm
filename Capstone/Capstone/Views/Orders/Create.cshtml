@@ -183,7 +183,7 @@
         </div>
 
         <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Use Place Description:</label>
+            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Use Period Description:</label>
             <div class="col-sm-10">
                 <div class="input-group">
                     @Html.EditorFor(model => model.UPD, new { htmlAttributes = new { @class = "form-control" } })
@@ -220,8 +220,11 @@
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Clip Type:</label>
             <div class="col-sm-10">
                 <div class="input-group">
-                    @Html.EditorFor(model => model.ClipType, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ClipType, "", new { @class = "text-danger" })
+                    @Html.DropDownList("ClipType", new List<SelectListItem>
+               {
+                   new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
+                   new SelectListItem {Text = "AL - Slotted Clip", Value = "AL"}
+               })
                     <span class="input-group-btn">
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
@@ -237,8 +240,16 @@
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Series Color:</label>
             <div class="col-sm-10">
                 <div class="input-group">
-                    @Html.EditorFor(model => model.SeriesColor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SeriesColor, "", new { @class = "text-danger" })
+                    @Html.DropDownList("SeriesColor", new List<SelectListItem>
+               {
+                   new SelectListItem {Text = "GR- Green", Value = "GR"},
+                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                   new SelectListItem {Text = "NO - None", Value = "NO"},
+                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                   new SelectListItem {Text = "RD - Red", Value = "RD"}
+               })
                     <span class="input-group-btn">
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
@@ -254,8 +265,16 @@
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Frequency Color:</label>
             <div class="col-sm-10">
                 <div class="input-group">
-                    @Html.EditorFor(model => model.FreqColor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.FreqColor, "", new { @class = "text-danger" })
+                    @Html.DropDownList("FreqColor", new List<SelectListItem>
+               {
+                   new SelectListItem {Text = "GR- Green", Value = "GR"},
+                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                   new SelectListItem {Text = "NO - None", Value = "NO"},
+                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                   new SelectListItem {Text = "RD - Red", Value = "RD"}
+               })
                     <span class="input-group-btn">
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
@@ -271,8 +290,13 @@
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Badge Use:</label>
             <div class="col-sm-10">
                 <div class="input-group">
-                    @Html.EditorFor(model => model.BadgeUse, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.BadgeUse, "", new { @class = "text-danger" })
+                    @Html.DropDownList("BadgeUse", new List<SelectListItem>
+               {
+                   new SelectListItem {Text = "PA - Participant", Value = "PA"},
+                   new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
+                   new SelectListItem {Text = "CO - Control", Value = "CO"}
+               })
+                   
                     <span class="input-group-btn">
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
