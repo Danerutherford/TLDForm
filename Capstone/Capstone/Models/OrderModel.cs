@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
@@ -10,6 +11,7 @@ namespace Capstone.Models
     {
         [Key]
         public int orderId { get; set; }
+
         public int AccountNbr { get; set; }
 
         public string AccountName1 { get; set; }

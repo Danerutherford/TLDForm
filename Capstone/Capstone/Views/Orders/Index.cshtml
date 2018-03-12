@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Order History</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -107,7 +107,7 @@
             @Html.DisplayFor(modelItem => item.BadgeUse)
         </td>
         <td>
-            @Html.ActionLink("View Order", "View", new { id=item.orderId }) |
+            @Html.ActionLink("View Order", "Edit", new { id=item.orderId }) |
             
         </td>
     </tr>
