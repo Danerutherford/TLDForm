@@ -53,7 +53,7 @@ namespace Capstone.Controllers
                 message.To.Add(new MailAddress(model.FromEmail));  // replace with valid value 
                 message.From = new MailAddress("testcapstonetest@gmail.com");  // replace with valid value
                 message.Subject = "Your email subject";
-                message.Body = string.Format(body, "TLD FORM", "Testing", model.Message);
+                message.Body = string.Format(body, "TLD FORM", "Testing", model.Message + "Registration Link: http://localhost:65222/Account/Register");
                 message.IsBodyHtml = true;
 
                 using (var smtp = new SmtpClient())
