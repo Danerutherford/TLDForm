@@ -267,6 +267,7 @@
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\Home\Authorize.cshtml" />
+    <Content Include="Views\Home\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

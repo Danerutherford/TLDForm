@@ -37,9 +37,14 @@ namespace Capstone.Controllers
             return View();
         }
 
+        public ActionResult Sent() //action reult for sending the email from authorize user
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Authorize(EmailFormModel model)
+        public async Task<ActionResult> Authorize(EmailFormModel model) //handles authorize user email and form filling
         {
             if (ModelState.IsValid)
             {
