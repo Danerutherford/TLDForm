@@ -3,6 +3,10 @@ Senior Capstone Project
 
 **Aaron TO DO: Urgent**
 
+* ~~Add Authorize User Button~~
+* ~~Add Authorise User Form that saves and submits~~
+* ~~Only Admin Authorize User Form~~
+* ~~Send email from dummy email with Register email link~~
 * Add Generated link to Authorize/Register email
 * Hide Register tab
 * Export Data from Database as XML to be emailed to company
