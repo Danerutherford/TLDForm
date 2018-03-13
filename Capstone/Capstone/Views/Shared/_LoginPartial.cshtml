@@ -8,6 +8,10 @@
     <ul class="nav navbar-nav navbar-right">
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            @if (new string[] { "Bogey@email.com", "applejuice@gmail.com", "user3" }.Contains(this.User.Identity.Name)) //If an Admin, be able to Authorize.
+            {
+            <li>@Html.ActionLink("Authorize User", "Authorize", "Home")</li>
+            }
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>

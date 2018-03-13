@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Capstone.Controllers
 {
-    
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -18,6 +18,11 @@ namespace Capstone.Controllers
         {
 
 
+            return View();
+        }
+
+        public ActionResult Authorize()
+        {
             return View();
         }
 

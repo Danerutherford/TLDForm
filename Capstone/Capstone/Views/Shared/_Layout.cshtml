@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    @if (new string[] { "Bogey@email.com", "applejuice@gmail.com", "user3" }.Contains(this.User.Identity.Name))
                     {
                         <li>@Html.ActionLink("Past Versions", "PastVersions", "Home")</li>
                     }
