@@ -48,12 +48,12 @@ namespace Capstone.Controllers
         {
             if (ModelState.IsValid)
             {
-                var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
+                var body = "<p>Email From: {0} ({1})</p><p>Here is your link to register!</p><p>{2}</p>";
                 var message = new MailMessage();
                 message.To.Add(new MailAddress(model.FromEmail));  // replace with valid value 
                 message.From = new MailAddress("testcapstonetest@gmail.com");  // replace with valid value
                 message.Subject = "TLDR Order Form Registration";
-                message.Body = string.Format(body, "TLD Admin", "testcapstonetest@gmail.com", model.Message + "Registration Link: http://localhost:65222/Account/Register");
+                message.Body = string.Format(body, "TLD Admin", "testcapstonetest@gmail.com", "Registration Link: http://localhost:65222/Account/Register");
                 message.IsBodyHtml = true;
 
                 using (var smtp = new SmtpClient())
