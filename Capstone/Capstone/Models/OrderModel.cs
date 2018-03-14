@@ -24,9 +24,23 @@ namespace Capstone.Models
 
         public int IDNbr { get; set; }
 
-        public string HolderType { get; set; }
+        string HType = "LA";
+        public string HolderType {
+            get
+            {
+                return HType;
+            }
 
-        public string Neutron { get; set; }
+            set
+            {
+                HType = value;
+            }
+        }
+           
+
+
+
+    public string Neutron { get; set; }
 
         public char BarCode { get; set; }
 

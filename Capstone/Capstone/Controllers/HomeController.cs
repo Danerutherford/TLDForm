@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Capstone.Controllers
 {
-
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
