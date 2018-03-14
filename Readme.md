@@ -18,7 +18,7 @@ Senior Capstone Project
 
 **Aaron Questions**
 
-* Do we have an Azure account?
+* Do we have an Azure account?(Not yet)
 * How to view database information (was weird on my end, but didnt try too hard to look)
-* Who is going to edit RAD?
-* Do we **need** to be able to send multiple forms in one submit? (Brainstorm this)
+* Who is going to edit RAD?(Dane already did it)
+* Do we **need** to be able to send multiple forms in one submit? (Brainstorm this)(yes)
