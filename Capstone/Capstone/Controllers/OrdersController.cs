@@ -49,11 +49,14 @@ namespace Capstone.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "orderId,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
         {
+        
+
             if (ModelState.IsValid)
             {
                 db.Orders.Add(orderModel);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                //return RedirectToAction("Index");
             }
 
             return View(orderModel);
@@ -73,6 +76,8 @@ namespace Capstone.Controllers
             }
             return View(orderModel);
         }
+
+        
 
         // POST: Orders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
