@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Clone Form</h2>
 
 
 @using (Html.BeginForm())
@@ -20,8 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AccountNbr, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
+                @Html.DisplayFor(model => model.AccountNbr)
             </div>
         </div>
 
