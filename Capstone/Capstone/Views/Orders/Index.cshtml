@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.orderId)
         </th>
         <th>
-            "Date"
+            @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            "No. of Badges"
+            @Html.DisplayNameFor(model => model.NumBadge)
         </th>
     </tr>
 
@@ -26,6 +26,14 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.orderId)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.NumBadge)
         </td>
         <td>
             @Html.ActionLink("View Order", "Edit", new { id=item.orderId }) |

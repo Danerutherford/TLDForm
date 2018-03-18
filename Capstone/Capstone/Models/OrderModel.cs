@@ -11,9 +11,12 @@ namespace Capstone.Models
     {
         [Key]
         public int orderId { get; set; }
-
+        
+        
+        [Display (Name = "Date")]
         public string Date { get; set; }
 
+        [Display(Name = "Number of Badges")]
         public int NumBadge { get; set; }
 
         public int AccountNbr { get; set; }
