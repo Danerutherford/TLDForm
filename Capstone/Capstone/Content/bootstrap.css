@@ -36,6 +36,10 @@ summary {
   display: block;
 }
 
+.paddingone {
+    padding-right: -1px;
+    padding-left: -1px;
+}
 audio,
 canvas,
 video {
@@ -858,8 +862,8 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 .col-xs-1,

@@ -9,102 +9,31 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table-bordered">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.AccountNbr)
+            @Html.DisplayNameFor(model => model.orderId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AccountName1)
+            @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AccountName2)
+            @Html.DisplayNameFor(model => model.NumBadge)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Lname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IDNbr)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HolderType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Neutron)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UPD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClipType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SeriesColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FreqColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BadgeUse)
-        </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.AccountNbr)
+            @Html.DisplayFor(modelItem => item.orderId)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.AccountName1)
+            @Html.DisplayFor(modelItem => item.Date)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.AccountName2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDNbr)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HolderType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Neutron)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UPD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClipType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SeriesColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FreqColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BadgeUse)
+            @Html.DisplayFor(modelItem => item.NumBadge)
         </td>
         <td>
             @Html.ActionLink("View Order", "Edit", new { id=item.orderId }) |

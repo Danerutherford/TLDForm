@@ -47,7 +47,7 @@ namespace Capstone.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "orderId,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
+        public ActionResult Create([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
         {
         
 
@@ -77,7 +77,22 @@ namespace Capstone.Controllers
             return View(orderModel);
         }
 
-        
+
+        public ActionResult Clone(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            OrderModel orderModel = db.Orders.Find(id);
+            if (orderModel == null)
+            {
+                return HttpNotFound();
+            }
+            return View(orderModel);
+        }
+
+
 
         // POST: Orders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -89,6 +104,19 @@ namespace Capstone.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(orderModel).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(orderModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Clone([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Orders.Add(orderModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
