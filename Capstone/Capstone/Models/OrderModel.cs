@@ -12,6 +12,10 @@ namespace Capstone.Models
         [Key]
         public int orderId { get; set; }
 
+        public string Date { get; set; }
+
+        public int NumBadge { get; set; }
+
         public int AccountNbr { get; set; }
 
         public string AccountName1 { get; set; }
@@ -63,9 +67,18 @@ namespace Capstone.Models
       
     }
 
-    public class OrderDBContext: DbContext
+    
+
+    public class OrderDBContext : DbContext
     {
+        public OrderDBContext(): base("Capstone")
+        {
+            Database.SetInitializer<OrderDBContext>(new DropCreateDatabaseIfModelChanges<OrderDBContext>());
+        }
+
         public DbSet<OrderModel> Orders { get; set; }
+
+        
     }
 
 }
