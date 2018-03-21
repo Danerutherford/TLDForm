@@ -7,9 +7,12 @@
 
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
+    
     @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
 
     <div class="form-horizontal">
         <div class=" page-header">
@@ -22,7 +25,7 @@
                 </div>
             </div>
             <h2>Order Form</h2>
-            <form>
+            
                 <div class=" form-group">
                 <div class='form-row'>
                         <div class='form-group col-md-6'>
@@ -38,47 +41,45 @@
                             @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
                         </div>
                 </div>
-            </form>
+            
         </div>
     </div>
 
+   
 
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class=" form-group row">
+        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Number:</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
+                <span class="input-group-btn">
 
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Number:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+                </span>
             </div>
         </div>
+    </div>
 
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 1:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.AccountName1, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AccountName1, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
+    <div class=" form-group row">
+        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 1:</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                @Html.EditorFor(model => model.AccountName1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountName1, "", new { @class = "text-danger" })
+                <span class="input-group-btn">
 
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+                </span>
             </div>
         </div>
+    </div>
 
         <div class=" form-group row">
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 2:</label>
@@ -313,7 +314,7 @@
                    new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
                    new SelectListItem {Text = "CO - Control", Value = "CO"}
                })
-                   
+
                     <span class="input-group-btn">
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
@@ -325,15 +326,20 @@
             </div>
         </div>
 
-                    <div class="form-group row">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Submit" class="btn btn-default" />
-                        </div>
-                    </div>
-                    }
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
 
 
 
-                    @section Scripts {
-                        @Scripts.Render("~/bundles/jqueryval")
-                    }
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+                  

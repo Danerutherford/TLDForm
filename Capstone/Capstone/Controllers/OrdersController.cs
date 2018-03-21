@@ -56,7 +56,7 @@ namespace Capstone.Controllers
                 db.Orders.Add(orderModel);
                 db.SaveChanges();
 
-                //return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
 
             return View(orderModel);
@@ -78,19 +78,7 @@ namespace Capstone.Controllers
         }
 
 
-        public ActionResult Clone(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            OrderModel orderModel = db.Orders.Find(id);
-            if (orderModel == null)
-            {
-                return HttpNotFound();
-            }
-            return View(orderModel);
-        }
+     
 
 
 
@@ -110,18 +98,7 @@ namespace Capstone.Controllers
             return View(orderModel);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Clone([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Orders.Add(orderModel);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(orderModel);
-        }
+        
 
         // GET: Orders/Delete/5
         public ActionResult Delete(int? id)
