@@ -10,7 +10,10 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+    foreach (var item in Model)
+    {
+
+    }
     <div class="form-horizontal">
         <h4>OrderModel</h4>
         <hr />
@@ -125,7 +128,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                @Html.ActionLink("Clone", "Create", "Orders")
+                @Html.ActionLink("Clone", "Clone") 
             </div>
         </div>
     </div>
