@@ -22,3 +22,29 @@ Senior Capstone Project
 * How to view database information (was weird on my end, but didnt try too hard to look)
 * Who is going to edit RAD?(Dane already did it)
 * Do we **need** to be able to send multiple forms in one submit? (Brainstorm this)(yes)
+
+**TO DO: Priority**
+
+* Draft Orders
+* Multiple Forms to Single order
+* User and Admin Roles in DB
+* Test on Mobile
+
+**TO DO: Secondary**
+
+* Aesthetic touches to website (color, bootstrap, etc.)
+* Test, Test, Test
+* Hide and Unhide appropriate elements
+* Port DB to Azure or something like it
+
+**TO DO: Bonus**
+* Past versions page
+
+
+
+
+
+
+
+
+
