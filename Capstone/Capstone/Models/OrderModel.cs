@@ -9,18 +9,25 @@ namespace Capstone.Models
 {
     public class OrderModel
     {
+
+        public OrderModel()
+        {
+            Neutron = "NT";
+            HolderType = "LA";
+            WLocation = "WB";
+        }
         [Key]
-        public int orderId { get; set; }
+        public string orderId { get; set; }
         
         
         [Display (Name = "Date")]
         public string Date { get; set; }
 
         [Display(Name = "Number of Badges")]
-        public int NumBadge { get; set; }
+        public string NumBadge { get; set; }
 
         [StringLength(6, ErrorMessage = "Cannot be longer than 6 characters.")]
-        public int AccountNbr { get; set; }
+        public string AccountNbr { get; set; }
 
         [StringLength(17, ErrorMessage = "Cannot be longer than 17 characters.")]
         public string AccountName1 { get; set; }
@@ -35,28 +42,18 @@ namespace Capstone.Models
         public string Lname { get; set; }
 
         [StringLength(8, ErrorMessage = "Cannot be longer than 8 characters.")]
-        public int IDNbr { get; set; }
+        public string IDNbr { get; set; }
 
         [StringLength(2, ErrorMessage = "Cannot be longer than 2 characters.")]
-        string HType = "LA";
-        public string HolderType {
-            get
-            {
-                return HType;
-            }
-
-            set
-            {
-                HType = value;
-            }
-        }
+        public string HolderType { get; set; }
+        
 
 
 
         [StringLength(2, ErrorMessage = "Cannot be longer than 2 characters.")]
         public string Neutron { get; set; }
 
-        public char BarCode { get; set; }
+        public string BarCode { get; set; }
 
         public string WLocation { get; set; }
 
@@ -66,7 +63,7 @@ namespace Capstone.Models
         [Required(ErrorMessage = "This is a required field")]
         public string Sname { get; set; }
 
-        public char CustomerKey { get; set; }
+        public string CustomerKey { get; set; }
 
         [Required(ErrorMessage = "This is a required field")]
         public string ClipType { get; set; }

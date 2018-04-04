@@ -39,7 +39,8 @@ namespace Capstone.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new OrderModel();
+            return View(model);
         }
 
         // POST: Orders/Create
