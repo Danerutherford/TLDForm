@@ -25,7 +25,7 @@
                     {
                         <li>@Html.ActionLink("Past Versions", "PastVersions", "Home")</li>
                     }
-                    else
+                    else if(User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Order History", "Index", "Orders")</li>
                     }
