@@ -27,15 +27,12 @@ Senior Capstone Project
 
 * Draft Orders
 * Multiple Forms to Single order
-* User and Admin Roles in DB
 * Test on Mobile
 
 **TO DO: Secondary**
 
 * Aesthetic touches to website (color, bootstrap, etc.)
-* Test, Test, Test
-* Hide and Unhide appropriate elements
-* Port DB to Azure or something like it
+
 
 **TO DO: Bonus**
 * Past versions page
