@@ -16,19 +16,21 @@ Senior Capstone Project
 * Who is going to edit RAD?(Dane already did it)
 * Do we **need** to be able to send multiple forms in one submit? (Brainstorm this)(yes)
 
-Aaron TO DO: 
-XML sending 
-Add new default values
-Edit existing default values
+**Aaron TO DO:**
+* XML sending 
+* Add new default values
+* Edit existing default values
+* Test on mobile
 
-Dane TO DO:
-Draft orders
-Transaction table for admins
-Multiple forms to single order
+**Dane TO DO:**
+* Migrate database to Azure
+* Draft orders
+* Transaction table for admins
+* Multiple forms to single order
 
-Ahmad TO DO:
-User Manual
-Make site look pretty
+**Ahmad TO DO:**
+* User Manual
+* Make site look pretty
 
 
 
