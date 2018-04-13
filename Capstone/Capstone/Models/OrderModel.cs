@@ -16,8 +16,10 @@ namespace Capstone.Models
             HolderType = "LA";
             WLocation = "WB";
         }
-        [Key]
-        public string orderId { get; set; }
+
+
+       [Key]
+       public int orderId { get; set; }
         
         
         [Display (Name = "Date")]
