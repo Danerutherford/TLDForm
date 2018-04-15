@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     @if (new string[] { "Bogey@email.com", "applejuice@gmail.com", "user3" }.Contains(this.User.Identity.Name))
                     {
-                        <li>@Html.ActionLink("Past Versions", "PastVersions", "Home")</li>
+                        <li>@Html.ActionLink("Transactions", "Index", "Orders")</li>
                     }
                     else if(User.Identity.IsAuthenticated)
                     {
