@@ -15,6 +15,7 @@ namespace Capstone.Models
             Neutron = "NT";
             HolderType = "LA";
             WLocation = "WB";
+            
         }
 
 
@@ -23,7 +24,7 @@ namespace Capstone.Models
         
         
         [Display (Name = "Date")]
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         [Display(Name = "Number of Badges")]
         public string NumBadge { get; set; }

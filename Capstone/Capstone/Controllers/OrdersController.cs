@@ -40,6 +40,7 @@ namespace Capstone.Controllers
         public ActionResult Create()
         {
             var model = new OrderModel();
+            model.Date = DateTime.Today;
             return View(model);
         }
 
