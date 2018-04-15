@@ -14,6 +14,7 @@ namespace Capstone.Controllers
     public class OrdersController : Controller
     {
         private OrderDBContext db = new OrderDBContext();
+        private DraftDBContext Db = new DraftDBContext();
 
         // GET: Orders
         public ActionResult Index()
@@ -36,6 +37,7 @@ namespace Capstone.Controllers
             return View(orderModel);
         }
 
+
         // GET: Orders/Create
         public ActionResult Create()
         {
@@ -44,6 +46,44 @@ namespace Capstone.Controllers
             return View(model);
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Draft([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] DraftsModel draftModel)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Db.Drafts.Add(draftModel);
+                    Db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nestingC:\Users\Dane\Documents\GitHub\TLDForm\Capstone\Capstone\Models\ManageViewModels.cs
+                            // the current instance as InnerException
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
+
+
+                return RedirectToAction("Index");
+            }
+
+            return View(draftModel);
+        }
         // POST: Orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
