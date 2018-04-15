@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace Capstone.Models
 {
@@ -108,5 +109,16 @@ namespace Capstone.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+    }
+
+    public class AccountViewModelsContext : DbContext
+    {
+        public AccountViewModelsContext() : base("Capstone")
+        {
+            Database.SetInitializer<AccountViewModelsContext>(new DropCreateDatabaseIfModelChanges<AccountViewModelsContext>());
+        }
+
+
+
     }
 }
