@@ -1,4 +1,4 @@
-﻿@model Capstone.Models.ParentModel
+﻿@model Capstone.Models.OrderModel
 
 
 @{
@@ -58,25 +58,7 @@
                                         </th>
                                     </tr>
 
-                                    @foreach (var item in Model.)
-                                    {
-                                        <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.orderId)
-                                            </td>
-
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Date)
-                                            </td>
-
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.NumBadge)
-                                            </td>
-                                            <td>
-                                                @Html.ActionLink("Clone Order", "Clone", new { id = item.orderId }) |
-                                            </td>
-                                        </tr>
-                                    }
+                                  
                             </table>
                             </div>
                         </div>
