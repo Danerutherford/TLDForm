@@ -40,24 +40,6 @@
                     @Html.EditorFor(model => model.NumBadge, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
                 </div>
-                <div class='form-group col-md-10'>
-                    <div class="pre-scrollable">
-                        <table class="table table-fixed">
-                            <thead>
-                                <tr>
-                                    <th class="col-xs-2">OrderID</th>
-                                    <th class="col-xs-8">Date</th>
-                                    <th class="col-xs-2">Number of Badges</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
-
-
-
-
             </div>
 
         </div>
@@ -240,10 +222,10 @@
                     <span class="input-group">
                         <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Clip Type:</label>
                         @Html.DropDownList("ClipType", new List<SelectListItem>
-                                                                                                                                                                                                                                                                                                                                                                                                                       {
-                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
-                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
-                                                                                                                                                                                                                                                                                                                                                                                                                       })
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
                             <button class="btn btn-default" type="button">Edit Field</button>
@@ -257,15 +239,15 @@
                 <div class="input-group">
                     <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Series Color:</label>
                     @Html.DropDownList("SeriesColor", new List<SelectListItem>
-                                                                                                                                                                                                                                                                                                                                                                                                       {
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "GR- Green", Value = "GR"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "BL - Blue", Value = "BL"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "NO - None", Value = "NO"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "OR - Orange", Value = "OR"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "PP - Purple", Value = "PP"},
-                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "RD - Red", Value = "RD"}
-                                                                                                                                                                                                                                                                                                                                                                                                       })
+                                                                                                                                                                                                                                                                                                                                                                                                                           {
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "GR- Green", Value = "GR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "NO - None", Value = "NO"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "RD - Red", Value = "RD"}
+                                                                                                                                                                                                                                                                                                                                                                                                                           })
                     @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                     {
                         <button class="btn btn-default" type="button">Edit Field</button>
@@ -283,13 +265,13 @@
                         <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Frequency Color:</label>
                         @Html.DropDownList("FreqColor", new List<SelectListItem>                                                                                                                                                                                                                               {
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "NO - None", Value = "NO"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "RD - Red", Value = "RD"}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               })
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "NO - None", Value = "NO"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "RD - Red", Value = "RD"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           })
 
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
@@ -304,11 +286,11 @@
                 <div class="input-group">
                     <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Badge Use:</label>
                     @Html.DropDownList("BadgeUse", new List<SelectListItem>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "PA - Participant", Value = "PA"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "CO - Control", Value = "CO"}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "PA - Participant", Value = "PA"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "CO - Control", Value = "CO"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       })
 
 
 
@@ -331,8 +313,141 @@
                 </div>
             </div>
 
-        }
 
+
+
+            <div class='form-group col-md-10'>
+                <div class="pre-scrollable">
+                    <table class="table table-fixed">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.orderId)
+
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Date)
+
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NumBadge)
+
+                                </th>
+
+                        <tbody>
+
+
+                            <tr>
+
+
+                                <td class="col-xs-2">1</td>
+
+
+                                <td class="col-xs-8">03/22/2018</td>
+
+
+                                <td class="col-xs-2">23</td>
+
+
+                            </tr>
+
+
+                            <tr>
+
+
+                                <td class="col-xs-2">2</td>
+
+
+                                <td class="col-xs-8">04/12/2018</td>
+
+
+                                <td class="col-xs-2">44</td>
+
+
+                            </tr>
+
+
+                            <tr>
+
+
+                                <td class="col-xs-2">3</td>
+
+
+                                <td class="col-xs-8">04/14/2018</td>
+
+
+                                <td class="col-xs-2">77</td>
+
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td class="col-xs-2">4</td>
+
+
+                                <td class="col-xs-8">04/16/2018</td>
+
+
+                                <td class="col-xs-2">86</td>
+
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td class="col-xs-2">5</td>
+
+
+                                <td class="col-xs-8">04/17/2018</td>
+
+
+                                <td class="col-xs-2">22</td>
+
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td class="col-xs-2">6</td>
+
+
+                                <td class="col-xs-8">04/18/2018</td>
+
+
+                                <td class="col-xs-2">55</td>
+
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td class="col-xs-2">7</td>
+
+
+                                <td class="col-xs-8">04/18/2018</td>
+
+
+                                <td class="col-xs-2">79</td>
+
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        }
     </div>
 
 

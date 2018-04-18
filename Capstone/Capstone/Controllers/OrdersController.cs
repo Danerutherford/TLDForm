@@ -89,7 +89,7 @@ namespace Capstone.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] ParentModel orderModel)
+        public ActionResult Create([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
         {
         
 
@@ -97,7 +97,7 @@ namespace Capstone.Controllers
             {
                 try
                 {
-                    db.Orders.Add(orderModel.OrderModel);
+                    db.Orders.Add(orderModel);
                     db.SaveChanges();
                 }
                 catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
