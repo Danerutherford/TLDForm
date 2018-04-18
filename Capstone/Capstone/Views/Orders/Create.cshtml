@@ -1,7 +1,8 @@
 ﻿@model Capstone.Models.OrderModel
 
-
 @{
+    /**/
+
     ViewBag.Title = "Order";
 }
 
@@ -18,7 +19,7 @@
             <div class=" btn-toolbar pull-right">
                 <div class=" btn-group">
                     @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                {
+                    {
                         <button type="button" class=" eButton">Edit Form</button>
                     }
                 </div>
@@ -39,410 +40,308 @@
                     @Html.EditorFor(model => model.NumBadge, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
                 </div>
+                <div class='form-group col-md-10'>
+                    <div class="pre-scrollable">
+                        <table class="table table-fixed">
+                            <thead>
+                                <tr>
+                                    <th class="col-xs-2">OrderID</th>
+                                    <th class="col-xs-8">Date</th>
+                                    <th class="col-xs-2">Number of Badges</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
 
             </div>
 
         </div>
     </div>
-
-
-
-    <div class=" form-group row">
-        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Number:</label>
-        <div class="col-sm-10">
-            <div class="input-group">
-                @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
-                <span class="input-group-btn">
-
-                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                    {
-                        <button class="btn btn-default" type="button">Edit Field</button>
-                    }
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <div class=" form-group row">
-        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 1:</label>
-        <div class="col-sm-10">
-            <div class="input-group">
-                @Html.EditorFor(model => model.AccountName1, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AccountName1, "", new { @class = "text-danger" })
-                <span class="input-group-btn">
-
-                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                    {
-                        <button class="btn btn-default" type="button">Edit Field</button>
-                    }
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <div class=" form-group row">
-        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 2:</label>
-        <div class="col-sm-10">
-            <div class="input-group">
-                @Html.EditorFor(model => model.AccountName2, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AccountName2, "", new { @class = "text-danger" })
-                <span class="input-group-btn">
-
-                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                    {
-                        <button class="btn btn-default" type="button">Edit Field</button>
-                    }
-                </span>
-            </div>
-        </div>
-    </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">First Name:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.Fname, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Fname, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Last Name:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.Lname, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Lname, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">ID Number:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.IDNbr, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.IDNbr, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Holder Type:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.HolderType, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.HolderType, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Neutron:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.Neutron, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Neutron, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Wear Location:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.WLocation, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.WLocation, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Use Period Description:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.UPD, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.UPD, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Series Name:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.Sname, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Sname, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Clip Type:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.DropDownList("ClipType", new List<SelectListItem>
-               {
-                   new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
-                   new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
-               })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Series Color:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.DropDownList("SeriesColor", new List<SelectListItem>
-               {
-                   new SelectListItem {Text = "GR- Green", Value = "GR"},
-                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
-                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
-                   new SelectListItem {Text = "NO - None", Value = "NO"},
-                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
-                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
-                   new SelectListItem {Text = "RD - Red", Value = "RD"}
-               })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Frequency Color:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.DropDownList("FreqColor", new List<SelectListItem>
-               {
-                   new SelectListItem {Text = "GR- Green", Value = "GR"},
-                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
-                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
-                   new SelectListItem {Text = "NO - None", Value = "NO"},
-                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
-                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
-                   new SelectListItem {Text = "RD - Red", Value = "RD"}
-               })
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Badge Use:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.DropDownList("BadgeUse", new List<SelectListItem>
-               {
-                   new SelectListItem {Text = "PA - Participant", Value = "PA"},
-                   new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
-                   new SelectListItem {Text = "CO - Control", Value = "CO"}
-               })
-
-                    <span class="input-group-btn">
-
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
-            </div>
-        </div>
-
-    if (User.Identity.Name != "Bogey@email.com")
-    {
-        <div class="form-group row">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-default" />
-                <input type="submit" value="Draft" class="btn btn-default" />
-            </div>
-        </div>
-    }
 
     <div class="form-horizontal">
-        
-            <div class='form-group col-md-10'>
-                <div class="pre-scrollable">
-                    <table class="table table-fixed">
-                        <thead>
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.orderId)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Date)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.NumBadge)
-                                </th>
-                        <tbody>
+        <div class=" form-group">
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Account Number:</label>
+                        @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { placeholder = "Account Number", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
 
-                            <tr>
-
-                                <td class="col-xs-2">1</td>
-
-                                <td class="col-xs-8">03/22/2018</td>
-
-                                <td class="col-xs-2">23</td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="col-xs-2">2</td>
-
-                                <td class="col-xs-8">04/12/2018</td>
-
-                                <td class="col-xs-2">44</td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td class="col-xs-2">3</td>
-
-                                <td class="col-xs-8">04/14/2018</td>
-
-                                <td class="col-xs-2">77</td>
-
-                            </tr>
-                            <tr>
-
-                                <td class="col-xs-2">4</td>
-
-                                <td class="col-xs-8">04/16/2018</td>
-
-                                <td class="col-xs-2">86</td>
-
-                            </tr>
-                            <tr>
-
-                                <td class="col-xs-2">5</td>
-
-                                <td class="col-xs-8">04/17/2018</td>
-
-                                <td class="col-xs-2">22</td>
-
-                            </tr>
-                            <tr>
-
-                                <td class="col-xs-2">6</td>
-
-                                <td class="col-xs-8">04/18/2018</td>
-
-                                <td class="col-xs-2">55</td>
-
-                            </tr>
-                            <tr>
-
-                                <td class="col-xs-2">7</td>
-
-                                <td class="col-xs-8">04/18/2018</td>
-
-                                <td class="col-xs-2">79</td>
-
-                            </tr>
-                        </tbody>
-
-
-
-
-
-
-
-
-                    </table>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class=" form-group">
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn ">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Account Name 1:</label>
+                        @Html.EditorFor(model => model.AccountName1, new { htmlAttributes = new { placeholder = "Account Name 1", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AccountName1, "", new { @class = "text-danger" })
+
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+                    </div>
+                </div>
+
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn ">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Account Name 2:</label>
+                        @Html.EditorFor(model => model.AccountName2, new { htmlAttributes = new { placeholder = "Account Name 2", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AccountName2, "", new { @class = "text-danger" })
+
+
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
             </div>
-        
+        </div>
+
+        <div class=" form-group">
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn ">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">First Name:</label>
+                        @Html.EditorFor(model => model.Fname, new { htmlAttributes = new { placeholder = "First Name", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Fname, "", new { @class = "text-danger" })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+
+                </div>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Last Name:</label>
+                        @Html.EditorFor(model => model.Lname, new { htmlAttributes = new { placeholder = "Last Name", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Lname, "", new { placeholder = "Last Name", @class = "text-danger" })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn ">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">ID Number:</label>
+                        @Html.EditorFor(model => model.IDNbr, new { htmlAttributes = new { placeholder = "ID Number", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IDNbr, "", new { @class = "text-danger" })
+
+
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class='form-group col-md-6'>
+                <div class="input-group-btn ">
+                    <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Holder Type:</label>
+                    @Html.EditorFor(model => model.HolderType, new { htmlAttributes = new { placeholder = "Holder Type", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.HolderType, "", new { @class = "text-danger" })
+
+
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Neutron:</label>
+                        @Html.EditorFor(model => model.Neutron, new { htmlAttributes = new { placeholder = "Neutron", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Neutron, "", new { @class = "text-danger" })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class='form-group col-md-6'>
+                <div class="input-group-btn ">
+                    <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Wear Location:</label>
+                    @Html.EditorFor(model => model.WLocation, new { htmlAttributes = new { placeholder = "Wear Location", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.WLocation, "", new { @class = "text-danger" })
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group-btn">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Use Period Description:</label>
+                        @Html.EditorFor(model => model.UPD, new { htmlAttributes = new { placeholder = "Use Period Description", @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UPD, "", new { @class = "text-danger" })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class='form-group col-md-6'>
+                <div class="input-group-btn">
+                    <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Series Name:</label>
+                    @Html.EditorFor(model => model.Sname, new { htmlAttributes = new { placeholder = "Series Name", @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Sname, "", new { @class = "text-danger" })
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <span class="input-group">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Clip Type:</label>
+                        @Html.DropDownList("ClipType", new List<SelectListItem>
+                                                                                                                                                                                                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
+                                                                                                                                                                                                                                                                                                                                                                                                                       })
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+
+                    </span>
+                </div>
+            </div>
+            <div class='form-group col-md-6'>
+                <div class="input-group">
+                    <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Series Color:</label>
+                    @Html.DropDownList("SeriesColor", new List<SelectListItem>
+                                                                                                                                                                                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "GR- Green", Value = "GR"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "NO - None", Value = "NO"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                                                                                                                                                                                                                                                                                                                                                                                                           new SelectListItem {Text = "RD - Red", Value = "RD"}
+                                                                                                                                                                                                                                                                                                                                                                                                       })
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class='form-group'>
+            <div class='form-row'>
+                <div class='form-group col-md-6'>
+                    <div class="input-group">
+                        <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Frequency Color:</label>
+                        @Html.DropDownList("FreqColor", new List<SelectListItem>                                                                                                                                                                                                                               {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "BL - Blue", Value = "BL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "LB - Light Blue", Value = "LB"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "NO - None", Value = "NO"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "OR - Orange", Value = "OR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "PP - Purple", Value = "PP"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   new SelectListItem {Text = "RD - Red", Value = "RD"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               })
+
+
+                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                        {
+                            <button class="btn btn-default" type="button">Edit Field</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class='form-group col-md-6'>
+                <div class="input-group">
+                    <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Badge Use:</label>
+                    @Html.DropDownList("BadgeUse", new List<SelectListItem>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "PA - Participant", Value = "PA"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "AR - Area Monitor", Value = "AR"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "CO - Control", Value = "CO"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
 
 
 
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
 
-            }
+                </div>
+            </div>
+        </div>
+
+
+        @if (User.Identity.Name != "Bogey@email.com")
+        {
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                    <input type="submit" value="Draft" class="btn btn-default" />
+                </div>
+            </div>
+
+        }
+
+    </div>
+
+
+}
 
 
 
-            @section Scripts {
-                @Scripts.Render("~/bundles/jqueryval")
-            }
-
+@section Scripts
+    {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
