@@ -8,7 +8,7 @@
 
 @using (Html.BeginForm())
 {
-    
+
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -24,54 +24,28 @@
                 </div>
             </div>
             <h2>Order Form</h2>
-            
-                <div class=" form-group">
+
+            <div class=" form-group">
                 <div class='form-row'>
-                        <div class='form-group col-md-6'>
-                            <label for="user_title">Date</label>
-                            @Html.EditorFor(model => model.Date,"{0:yyyy-MM-dd}", new { htmlAttributes = new { @class = "form-control", @type = "date"} })
-                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-                        </div>
+                    <div class='form-group col-md-6'>
+                        <label for="user_title">Date</label>
+                        @Html.EditorFor(model => model.Date, "{0:yyyy-MM-dd}", new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
                     </div>
-                    
-                        <div class='form-group col-md-6'>
-                            <label for="user_firstname">Number of Badges</label>
-                            @Html.EditorFor(model => model.NumBadge, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
-                        </div>
-                    <div class='form-group col-md-10'>
-                        <div class="pre-scrollable">
-                            <table class="table table-fixed">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.orderId)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Date)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.NumBadge)
-                                        </th>
-                                        <th>
+                </div>
 
-                                        </th>
-                                    </tr>
+                <div class='form-group col-md-6'>
+                    <label for="user_firstname">Number of Badges</label>
+                    @Html.EditorFor(model => model.NumBadge, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
+                </div>
 
-                                  
-                            </table>
-                            </div>
-                        </div>
+            </div>
 
-
-
-
-                    </div>
-            
         </div>
     </div>
 
-   
+
 
     <div class=" form-group row">
         <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Number:</label>
@@ -107,22 +81,22 @@
         </div>
     </div>
 
-        <div class=" form-group row">
-            <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 2:</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    @Html.EditorFor(model => model.AccountName2, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AccountName2, "", new { @class = "text-danger" })
-                    <span class="input-group-btn">
+    <div class=" form-group row">
+        <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">Account Name 2:</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                @Html.EditorFor(model => model.AccountName2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountName2, "", new { @class = "text-danger" })
+                <span class="input-group-btn">
 
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-                    </span>
-                </div>
+                    @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
+                    {
+                        <button class="btn btn-default" type="button">Edit Field</button>
+                    }
+                </span>
             </div>
         </div>
+    </div>
 
         <div class=" form-group row">
             <label for="smFormGroupInput" class="col-sm-2 col-form-label col-form-label-sm">First Name:</label>
@@ -351,26 +325,124 @@
                 </div>
             </div>
         </div>
+
+    if (User.Identity.Name != "Bogey@email.com")
+    {
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+                <input type="submit" value="Draft" class="btn btn-default" />
+            </div>
+        </div>
+    }
+
+    <div class="form-horizontal">
         
-        if (User.Identity.Name != "Bogey@email.com")
-        {
-            <div class="form-group row">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Submit" class="btn btn-default" />
-                    <input type="submit" value="Draft" class="btn btn-default" />
+            <div class='form-group col-md-10'>
+                <div class="pre-scrollable">
+                    <table class="table table-fixed">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.orderId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Date)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NumBadge)
+                                </th>
+                        <tbody>
+
+                            <tr>
+
+                                <td class="col-xs-2">1</td>
+
+                                <td class="col-xs-8">03/22/2018</td>
+
+                                <td class="col-xs-2">23</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="col-xs-2">2</td>
+
+                                <td class="col-xs-8">04/12/2018</td>
+
+                                <td class="col-xs-2">44</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td class="col-xs-2">3</td>
+
+                                <td class="col-xs-8">04/14/2018</td>
+
+                                <td class="col-xs-2">77</td>
+
+                            </tr>
+                            <tr>
+
+                                <td class="col-xs-2">4</td>
+
+                                <td class="col-xs-8">04/16/2018</td>
+
+                                <td class="col-xs-2">86</td>
+
+                            </tr>
+                            <tr>
+
+                                <td class="col-xs-2">5</td>
+
+                                <td class="col-xs-8">04/17/2018</td>
+
+                                <td class="col-xs-2">22</td>
+
+                            </tr>
+                            <tr>
+
+                                <td class="col-xs-2">6</td>
+
+                                <td class="col-xs-8">04/18/2018</td>
+
+                                <td class="col-xs-2">55</td>
+
+                            </tr>
+                            <tr>
+
+                                <td class="col-xs-2">7</td>
+
+                                <td class="col-xs-8">04/18/2018</td>
+
+                                <td class="col-xs-2">79</td>
+
+                            </tr>
+                        </tbody>
+
+
+
+
+
+
+
+
+                    </table>
                 </div>
             </div>
-        }
+            </div>
+        
 
 
 
 
-}
+            }
 
 
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
 
-                  
+
