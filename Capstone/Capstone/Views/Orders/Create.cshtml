@@ -1,5 +1,6 @@
 ﻿@model Capstone.Models.OrderModel
 
+
 @{
     ViewBag.Title = "Order";
 }
@@ -43,14 +44,39 @@
                             <table class="table table-fixed">
                                 <thead>
                                     <tr>
-                                        <th class="col-xs-2">OrderID</th>
-                                        <th class="col-xs-8">Date</th>
-                                        <th class="col-xs-2">Number of Badges</th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.orderId)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Date)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.NumBadge)
+                                        </th>
+                                        <th>
+
+                                        </th>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.orderId)
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Date)
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NumBadge)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Clone Order", "Clone", new { id = item.orderId }) |
+                                            </td>
+                                        </tr>
+                                    }
                             </table>
                             </div>
                         </div>

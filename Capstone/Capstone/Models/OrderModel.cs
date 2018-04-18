@@ -92,7 +92,7 @@ namespace Capstone.Models
             Database.SetInitializer<OrderDBContext>(new DropCreateDatabaseIfModelChanges<OrderDBContext>());
         }
 
-        public DbSet<OrderModel> Orders { get; set; }
+        public List<OrderModel> Orders { get; set; }
 
         
     }
