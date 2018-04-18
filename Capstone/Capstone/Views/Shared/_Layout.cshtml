@@ -25,10 +25,7 @@
                     {
                         <li>@Html.ActionLink("Transactions", "Index", "Orders")</li>
                     }
-                    else if(User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("Order History", "Index", "Orders")</li>
-                    }
+                    
                     
                     
                 </ul>
