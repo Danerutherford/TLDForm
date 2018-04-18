@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace Capstone.Models
 {
-    public class OrderModel
+    public class OrderModel 
     {
 
         public OrderModel()
@@ -92,7 +92,7 @@ namespace Capstone.Models
             Database.SetInitializer<OrderDBContext>(new DropCreateDatabaseIfModelChanges<OrderDBContext>());
         }
 
-        public List<OrderModel> Orders { get; set; }
+        public DbSet<OrderModel> Orders { get; set; }
 
         
     }
