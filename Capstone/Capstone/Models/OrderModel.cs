@@ -34,7 +34,7 @@ namespace Capstone.Models
         [Display(Name = "Number of Badges")]
         public string NumBadge { get; set; }
 
-        [StringLength(6, ErrorMessage = "Cannot be longer than 6 characters.")]
+        [StringLength(6, MinimumLength = 6,ErrorMessage = "Must be 6 characters long.")]
         public string AccountNbr { get; set; }
 
         [StringLength(17, ErrorMessage = "Cannot be longer than 17 characters.")]
@@ -49,7 +49,7 @@ namespace Capstone.Models
         [StringLength(17, ErrorMessage = "Cannot be longer than 17 characters.")]
         public string Lname { get; set; }
 
-        [StringLength(8, ErrorMessage = "Cannot be longer than 8 characters.")]
+        [StringLength(8, MinimumLength = 8,ErrorMessage = "Must be 8 characters long.")]
         public string IDNbr { get; set; }
 
         [StringLength(2, ErrorMessage = "Cannot be longer than 2 characters.")]
@@ -61,6 +61,7 @@ namespace Capstone.Models
         [StringLength(2, ErrorMessage = "Cannot be longer than 2 characters.")]
         public string Neutron { get; set; }
 
+        [StringLength(12, MinimumLength = 12, ErrorMessage = "Must be 12 characters long.")]
         public string BarCode { get; set; }
 
         public string WLocation { get; set; }
@@ -71,6 +72,7 @@ namespace Capstone.Models
         [Required(ErrorMessage = "This is a required field")]
         public string Sname { get; set; }
 
+        [StringLength(25, ErrorMessage = "Cannot be longer than 25 characters.")]
         public string CustomerKey { get; set; }
 
         [Required(ErrorMessage = "This is a required field")]
