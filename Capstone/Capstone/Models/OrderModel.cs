@@ -15,16 +15,21 @@ namespace Capstone.Models
             Neutron = "NT";
             HolderType = "LA";
             WLocation = "WB";
-            
+           
         }
 
 
        [Key]
        public int orderId { get; set; }
+
+
         
         
         [Display (Name = "Date")]
         public DateTime Date { get; set; }
+
+        [Display(Name = "User")]
+        public string UserID { get; set; }
 
         [Display(Name = "Number of Badges")]
         public string NumBadge { get; set; }

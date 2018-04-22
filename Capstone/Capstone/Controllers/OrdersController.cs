@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Capstone.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Capstone.Controllers
 {
@@ -42,6 +43,7 @@ namespace Capstone.Controllers
         public ActionResult Create()
         {
             OrderModel model = new OrderModel();
+            model.UserID = User.Identity.Name.ToString();
             model.Date = DateTime.Today;
             return View(model);
         }
