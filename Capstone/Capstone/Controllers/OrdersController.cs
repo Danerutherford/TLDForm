@@ -41,9 +41,47 @@ namespace Capstone.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            var model = new OrderModel();
+            OrderModel model = new OrderModel();
             model.Date = DateTime.Today;
             return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    db.Orders.Add(orderModel);
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nestingC:\Users\Dane\Documents\GitHub\TLDForm\Capstone\Capstone\Models\ManageViewModels.cs
+                            // the current instance as InnerException
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
+
+
+                return RedirectToAction("Index");
+            }
+
+            return View(orderModel);
         }
 
 
@@ -87,43 +125,7 @@ namespace Capstone.Controllers
         // POST: Orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "orderId,Date,NumBadge,AccountNbr,AccountName1,AccountName2,Fname,Lname,IDNbr,HolderType,Neutron,WLocation,UPD,Sname,ClipType,SeriesColor,FreqColor,BadgeUse")] OrderModel orderModel)
-        {
         
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    db.Orders.Add(orderModel);
-                    db.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
-                {
-                    Exception raise = dbEx;
-                    foreach (var validationErrors in dbEx.EntityValidationErrors)
-                    {
-                        foreach (var validationError in validationErrors.ValidationErrors)
-                        {
-                            string message = string.Format("{0}:{1}",
-                                validationErrors.Entry.Entity.ToString(),
-                                validationError.ErrorMessage);
-                            // raise a new exception nesting
-                            // the current instance as InnerException
-                            raise = new InvalidOperationException(message, raise);
-                        }
-                    }
-                    throw raise;
-                }
-                
-
-                return RedirectToAction("Index");
-            }
-
-            return View(orderModel);
-        }
 
         // GET: Orders/Edit/5
         public ActionResult Edit(int? id)

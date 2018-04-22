@@ -7,7 +7,7 @@ namespace Capstone.Models
 {
     public class ParentModel
     {
-        public OrderModel OrderModel { get; set; }
-        public IEnumerable<OrderModel> IOrdermodel { get; set; }
+        public OrderModel Order { get; set; }
+        public List<DraftsModel> Draft { get; set; }
     }
 }

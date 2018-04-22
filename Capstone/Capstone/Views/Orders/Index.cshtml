@@ -37,7 +37,9 @@
             @Html.DisplayFor(modelItem => item.NumBadge)
         </td>
         <td>
-            @Html.ActionLink("Clone Order", "Clone", new { id=item.orderId }) |  
+            @Html.ActionLink("Clone Order", "Clone", new { id=item.orderId }) |
+            @Html.ActionLink("Delete Order", "Delete", new { id = item.orderId })
+            
         </td>
     </tr>
 }

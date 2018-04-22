@@ -25,9 +25,13 @@
                     {
                         <li>@Html.ActionLink("Transactions", "Index", "Orders")</li>
                     }
-                    
-                    
-                    
+                    else
+                    {
+                        <li > @Html.ActionLink("Orders", "Index", "Orders")</li>
+                    }
+
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
