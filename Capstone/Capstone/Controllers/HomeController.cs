@@ -53,7 +53,9 @@ namespace Capstone.Controllers
                 message.To.Add(new MailAddress(model.FromEmail));  // replace with valid value 
                 message.From = new MailAddress("testcapstonetest@gmail.com");  // replace with valid value
                 message.Subject = "TLDR Order Form Registration";
-                message.Body = string.Format(body, "TLD Admin", "testcapstonetest@gmail.com", "Registration Link: http://localhost:65222/Account/Register");
+                // Get url for registration
+                var url = string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, "/Account/Register");
+                message.Body = string.Format(body, "TLD Admin", "testcapstonetest@gmail.com", "Registration Link: " + url);
                 message.IsBodyHtml = true;
 
                 using (var smtp = new SmtpClient())
