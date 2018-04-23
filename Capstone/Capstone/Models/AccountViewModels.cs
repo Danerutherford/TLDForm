@@ -113,7 +113,7 @@ namespace Capstone.Models
 
     public class AccountViewModelsContext : DbContext
     {
-        public AccountViewModelsContext() : base("Capstone")
+        public AccountViewModelsContext() : base("Capstone2018_db")
         {
             Database.SetInitializer<AccountViewModelsContext>(new DropCreateDatabaseIfModelChanges<AccountViewModelsContext>());
         }
