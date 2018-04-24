@@ -195,13 +195,17 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                        new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
                                                                                                                                                                                                                                                                                                                                                                                                                                                                        new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
                                                                                                                                                                                                                                                                                                                                                                                                                                                    })
-                            
+
 
 
                         </span>
                         <div id="Edit4" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" type="button" id="edit">Edit Field</button>
                         </div>
+                        <div id="Add" class=" InitiallyHidden">
+                            <button class="btn btn-default" type="button">Add Default</button>
+                        </div>
+
                     </div>
                 </div>
                 <div class='form-group col-md-6'>
@@ -219,7 +223,10 @@
                                                                                                                                                                                                                                                                                                                                                                                            })
 
                         <div id="Edit5" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" type="button" id="edit2">Edit Field</button>
+                        </div>
+                        <div id="Add2" class=" InitiallyHidden">
+                            <button class="btn btn-default" type="button">Add Default</button>
                         </div>
 
 
@@ -245,7 +252,10 @@
 
 
                             <div id="Edit6" class=" InitiallyHidden">
-                                <button class="btn btn-default" type="button">Edit Field</button>
+                                <button class="btn btn-default" type="button" id="edit3">Edit Field</button>
+                            </div>
+                            <div id="Add3" class=" InitiallyHidden">
+                                <button class="btn btn-default" type="button">Add Default</button>
                             </div>
 
                         </div>
@@ -264,7 +274,10 @@
 
 
                         <div id="Edit7" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Edit Field </button>
+                            <button class="btn btn-default" type="button" id="edit4">Edit Field</button>
+                        </div>
+                        <div id="Add4" class=" InitiallyHidden">
+                            <button class="btn btn-default" type="button">Add Default</button>
                         </div>
 
                     </div>
@@ -301,4 +314,41 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#edit").click(function () {
+                $("#Add").toggle();
+
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#edit2").click(function () {
+                $("#Add2").toggle();
+
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#edit3").click(function () {
+                $("#Add3").toggle();
+
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#edit4").click(function () {
+                $("#Add4").toggle();
+
+            });
+        });
+    </script>
+
 }
