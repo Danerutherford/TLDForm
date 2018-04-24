@@ -141,11 +141,6 @@
                         @Html.EditorFor(model => model.HolderType, new { htmlAttributes = new { placeholder = "Holder Type", @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.HolderType, "", new { @class = "text-danger" })
 
-
-                        <div id="Edit1" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -157,9 +152,6 @@
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Neutron:</label>
                             @Html.EditorFor(model => model.Neutron, new { htmlAttributes = new { placeholder = "Neutron", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Neutron, "", new { @class = "text-danger" })
-                            <div id="Edit2" class=" InitiallyHidden">
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            </div>
 
                         </div>
                     </div>
@@ -169,9 +161,6 @@
                         <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Wear Location:</label>
                         @Html.EditorFor(model => model.WLocation, new { htmlAttributes = new { placeholder = "Wear Location", @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.WLocation, "", new { @class = "text-danger" })
-                        <div id="Edit3" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        </div>
 
                     </div>
                 </div>
