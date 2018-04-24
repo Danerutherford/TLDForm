@@ -32,3 +32,6 @@
         background-color: black;
     }
 
+   #edit{
+       visibility:hidden;
+   }

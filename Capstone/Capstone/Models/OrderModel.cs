@@ -28,6 +28,8 @@ namespace Capstone.Models
         [Display (Name = "Date")]
         public DateTime Date { get; set; }
 
+        [EmailAddress]
+        [Required(ErrorMessage = "This is a required field")]
         [Display(Name = "User")]
         public string UserID { get; set; }
 

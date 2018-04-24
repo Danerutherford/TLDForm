@@ -20,7 +20,7 @@
                     <div class=" btn-group">
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <input type="button" value ="Edit Form"onclick="Show('input-group-btn');"/>
+                            <input type="button" value ="Edit Form"onclick="Show('edits');"/>
                         }
                     </div>
                 </div>
@@ -60,15 +60,15 @@
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Account Number:</label>
                             @Html.EditorFor(model => model.AccountNbr, new { htmlAttributes = new { placeholder = "Account Number", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.AccountNbr, "", new { @class = "text-danger" })
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
+                            
+                            
 
                         </div>
                     </div>
                 </div>
             </div>
+
+            
             
 
             <div class=" form-group">
@@ -79,10 +79,7 @@
                             @Html.EditorFor(model => model.AccountName1, new { htmlAttributes = new { placeholder = "Account Name 1", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.AccountName1, "", new { @class = "text-danger" })
 
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
+                       
                         </div>
                     </div>
 
@@ -93,10 +90,7 @@
                             @Html.ValidationMessageFor(model => model.AccountName2, "", new { @class = "text-danger" })
 
 
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
+                           
 
                         </div>
                     </div>
@@ -110,10 +104,7 @@
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">First Name:</label>
                             @Html.EditorFor(model => model.Fname, new { htmlAttributes = new { placeholder = "First Name", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Fname, "", new { @class = "text-danger" })
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
+                            
 
                         </div>
 
@@ -123,10 +114,7 @@
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Last Name:</label>
                             @Html.EditorFor(model => model.Lname, new { htmlAttributes = new { placeholder = "Last Name", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.Lname, "", new { placeholder = "Last Name", @class = "text-danger" })
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
+                            
 
                         </div>
                     </div>
@@ -142,11 +130,6 @@
                             @Html.ValidationMessageFor(model => model.IDNbr, "", new { @class = "text-danger" })
 
 
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
-
                         </div>
                     </div>
                 </div>
@@ -159,7 +142,7 @@
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                         }
 
                     </div>
@@ -175,7 +158,7 @@
                             @Html.ValidationMessageFor(model => model.Neutron, "", new { @class = "text-danger" })
                             @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                             {
-                                <button class="btn btn-default" type="button">Edit Field</button>
+                                <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                             }
 
                         </div>
@@ -188,7 +171,7 @@
                         @Html.ValidationMessageFor(model => model.WLocation, "", new { @class = "text-danger" })
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                         }
 
                     </div>
@@ -202,11 +185,6 @@
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Use Period Description:</label>
                             @Html.EditorFor(model => model.UPD, new { htmlAttributes = new { placeholder = "Use Period Description", @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.UPD, "", new { @class = "text-danger" })
-                            @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                            {
-                                <button class="btn btn-default" type="button">Edit Field</button>
-                            }
-
                         </div>
                     </div>
                 </div>
@@ -215,11 +193,6 @@
                         <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Series Name:</label>
                         @Html.EditorFor(model => model.Sname, new { htmlAttributes = new { placeholder = "Series Name", @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.Sname, "", new { @class = "text-danger" })
-                        @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
-                        {
-                            <button class="btn btn-default" type="button">Edit Field</button>
-                        }
-
                     </div>
                 </div>
             </div>
@@ -233,10 +206,10 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                        new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
                                                                                                                                                                                                                                                                                                                                                                                                                                                                        new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
                             @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                             {
-                                <button class="btn btn-default" type="button">Edit Field</button>
+                                <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                             }
 
 
@@ -254,11 +227,11 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                new SelectListItem {Text = "NO - None", Value = "NO"},
                                                                                                                                                                                                                                                                                                                                                                                                                                new SelectListItem {Text = "OR - Orange", Value = "OR"},
                                                                                                                                                                                                                                                                                                                                                                                                                                new SelectListItem {Text = "PP - Purple", Value = "PP"},
-                                                                                                                                                                                                                                                                                                                                                                                                                               new SelectListItem {Text = "RD - Red", Value = "RD"}
+                                                                                                                                                                                                                                                                                                                                                                                                      new SelectListItem {Text = "RD - Red", Value = "RD"}
                                                                                                                                                                                                                                                                                                                                                                                                                            })
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                         }
 
 
@@ -284,7 +257,7 @@
 
                             @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                             {
-                                <button class="btn btn-default" type="button">Edit Field</button>
+                                <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                             }
 
                         </div>
@@ -304,7 +277,7 @@
 
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <button class="btn btn-default" type="button">Edit Field</button>
+                            <button class="btn btn-default" id="edit" type="button">Edit Field</button>
                         }
 
                     </div>
@@ -318,7 +291,6 @@
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Submit" class="btn btn-default" />
                     <input type="submit" value="Draft" class="btn btn-default" />
-                    <input type="button" value="Add Badge" id="clone" />
                 </div>
             </div>
     }
@@ -328,9 +300,9 @@
 @section Scripts
     {
     <script type="text/javascript">
-        function Show(input - group - btn) {
+        function Show(edit) {
             
-            document.getElementById(input - group - btn).style.visible = 'visible';
+            document.getElementById(edit).style.visible = 'visible';
             
         }
 
