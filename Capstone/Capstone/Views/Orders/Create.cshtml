@@ -20,7 +20,7 @@
                     <div class=" btn-group">
                         @if (new string[] { "Bogey@email.com", "user2", "user3" }.Contains(this.User.Identity.Name))
                         {
-                            <button type="button" class=" eButton">Edit Form</button>
+                            <input type="button" value ="Edit Form"onclick="Show('input-group-btn');"/>
                         }
                     </div>
                 </div>
@@ -328,13 +328,12 @@
 @section Scripts
     {
     <script type="text/javascript">
-        $('input#clone').click(
-            function () {
-                $('form#old form-group row').text($('form#old textarea').val())
-                $("form#old").clone().attr('id', 'new_form').appendTo("body")
+        function Show(input - group - btn) {
+            
+            document.getElementById(input - group - btn).style.visible = 'visible';
+            
+        }
 
-            }
-        )
 
     </script>
 

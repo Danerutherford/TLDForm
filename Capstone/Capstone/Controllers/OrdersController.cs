@@ -45,7 +45,6 @@ namespace Capstone.Controllers
         public ActionResult Create()
         {
             OrderModel model = new OrderModel();
-            model.UserID = User.Identity.Name.ToString();
             model.Date = DateTime.Today;
             return View(model);
         }
