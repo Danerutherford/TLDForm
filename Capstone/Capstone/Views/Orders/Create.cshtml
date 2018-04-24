@@ -203,7 +203,9 @@
                             <button class="btn btn-default" type="button" id="edit">Edit Field</button>
                         </div>
                         <div id="Add" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button">Add Default</button>
+                            <input id="addD1" type="text" />
+
+                            <button class="btn btn-default" type="button" id="add1">Add Default</button>
                         </div>
 
                     </div>
@@ -226,6 +228,7 @@
                             <button class="btn btn-default" type="button" id="edit2">Edit Field</button>
                         </div>
                         <div id="Add2" class=" InitiallyHidden">
+                            <input id="addD2" type="text" />
                             <button class="btn btn-default" type="button">Add Default</button>
                         </div>
 
@@ -255,6 +258,8 @@
                                 <button class="btn btn-default" type="button" id="edit3">Edit Field</button>
                             </div>
                             <div id="Add3" class=" InitiallyHidden">
+                                <input id="addD3" type="text" />
+
                                 <button class="btn btn-default" type="button">Add Default</button>
                             </div>
 
@@ -277,6 +282,8 @@
                             <button class="btn btn-default" type="button" id="edit4">Edit Field</button>
                         </div>
                         <div id="Add4" class=" InitiallyHidden">
+                            <input id="addD4" type="text" />
+
                             <button class="btn btn-default" type="button">Add Default</button>
                         </div>
 
@@ -347,6 +354,19 @@
             $("#edit4").click(function () {
                 $("#Add4").toggle();
 
+            });
+        });
+    </script>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("#add1").click(function () {
+                var newitem = $("#addD1").val(); //get the new value
+                //alert(newitem);
+                var newOption = "<option value='" + newitem + "'>" + newitem + "</option>";
+                $(newOption).insertBefore($("#ddlCity option:last")); //add new option
+                $("#ddlCity").val(newitem);
+                return false;
             });
         });
     </script>
