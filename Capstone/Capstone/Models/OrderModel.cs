@@ -96,7 +96,7 @@ namespace Capstone.Models
 
     public class OrderDBContext : DbContext
     {
-        public OrderDBContext(): base("Capstone2018_db")
+        public OrderDBContext(): base("Capstone")
         {
             Database.SetInitializer<OrderDBContext>(new DropCreateDatabaseIfModelChanges<OrderDBContext>());
         }
