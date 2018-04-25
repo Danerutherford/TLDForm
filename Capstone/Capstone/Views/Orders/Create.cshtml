@@ -181,11 +181,11 @@
                         <span class="input-group">
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Clip Type:</label>
                             @Html.DropDownList("ClipType", new List<SelectListItem>
-                            {
-                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL" },
-                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL" }
-
-                            }, new {@id = "ClipType"})
+                             {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 })
+                            
                              
                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
                              
@@ -348,12 +348,5 @@
         });
     </script>
 
-<script type="text/javascript">
-        $(document).ready(function () {
-            $("#add1").click(function () { $("#ClipType").append($('<option>', { Value: $('#addD1').val(), Text: $('#addD1').val() })); });
-        });
-        
-       
-    </script>
 
 }
