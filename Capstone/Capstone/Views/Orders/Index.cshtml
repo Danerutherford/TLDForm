@@ -19,7 +19,6 @@
             @Html.DisplayNameFor(model => model.NumBadge)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UserID)
         </th>
     </tr>
 
@@ -36,9 +35,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.NumBadge)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserID)
-        </td>
+        
 
           @if (new string[] { "Bogey@email.com", "applejuice@gmail.com", "user3" }.Contains(this.User.Identity.Name))
           {
@@ -47,7 +44,7 @@
           else
           {
               <td>
-                  @Html.ActionLink("Clone Order", "Clone", new { id = item.orderId })
+                  @Html.ActionLink("Clone Order", "Clone", new { id = item.orderId }) |
                   @Html.ActionLink("Delete Order", "Delete", new { id = item.orderId })
               </td>
            
