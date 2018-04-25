@@ -16,6 +16,9 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </th>
+        <th>
             
         </th>
     </tr>
@@ -30,7 +33,11 @@
             @Html.DisplayFor(modelItem => item.Date)
         </td>
 
-        
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderStatus)
+        </td>
+
+
 
           @if (new string[] { "Bogey@email.com", "applejuice@gmail.com", "user3" }.Contains(this.User.Identity.Name))
           {
