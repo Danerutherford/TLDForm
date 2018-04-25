@@ -296,7 +296,7 @@
     {
         <div class="form-group row">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" class="btn btn-default" />
+                <input id="submitbutton" type="button" value="Submit" class="btn btn-default" />
                 <input type="submit" value="Draft" class="btn btn-default" />
             </div>
         </div>
@@ -367,6 +367,10 @@
                 $(newOption).insertBefore($("#ddlCity option:last")); //add new option
                 $("#ddlCity").val(newitem);
                 return false;
+            });
+
+            $('#submitbutton').click(function () {
+                window.location = 'submit';
             });
         });
     </script>

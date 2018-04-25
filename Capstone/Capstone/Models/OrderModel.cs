@@ -89,7 +89,7 @@ namespace Capstone.Models
         [Required(ErrorMessage = "This is a required field")]
         public string BadgeUse { get; set; }
 
-      
+        public string OrderStatus { get; set; }
     }
 
     

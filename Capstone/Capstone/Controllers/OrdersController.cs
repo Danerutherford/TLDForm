@@ -59,6 +59,7 @@ namespace Capstone.Controllers
             {
                 try
                 {
+                    orderModel.OrderStatus = "Draft";
                     db.Orders.Add(orderModel);
                     db.SaveChanges();
 
@@ -105,7 +106,7 @@ namespace Capstone.Controllers
                         smtp.EnableSsl = true;
                         smtp.Send(message);
                         //smtp.SendMailAsync(message);
-                        return RedirectToAction("Sent");
+                        //return RedirectToAction("Sent");
                     }
 
                 }
@@ -175,7 +176,60 @@ namespace Capstone.Controllers
         // POST: Orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        
+
+        public ActionResult Submit()
+        {
+
+            var drafts = db.Orders.Where(o => o.OrderStatus == "Draft").ToList();
+
+            foreach (var item in drafts)
+            {
+                item.OrderStatus = "Submitted";
+            }
+
+            db.SaveChanges();
+
+
+            System.Xml.Serialization.XmlSerializer xs = new System.Xml.Serialization.XmlSerializer(drafts.GetType());
+            //var sr = new StreamWriter("data.xml");
+            var xml = ""; // System.IO.File.ReadAllText("data.xml") 
+            using (StringWriter sr = new StringWriter())
+            {
+                xs.Serialize(sr, drafts);
+                xml = sr.ToString();
+                //xml = Server.HtmlEncode(xml); // < >
+            }
+
+            
+
+
+            //var body = "<p>Email From: {0} ({1})</p><p>Here is the xml!</p><p>{2}</p>" + xml;
+            var body = "Here is the xml!\n\n" + xml;
+            var message = new MailMessage();
+            message.To.Add(new MailAddress("danerutherford94@gmail.com"));  // replace with valid value 
+            message.From = new MailAddress("testcapstonetest@gmail.com");  // replace with valid value
+            message.Subject = "XML File";
+            message.Body = string.Format(body, "TLD Admin", "testcapstonetest@gmail.com", "File Attached");
+            message.IsBodyHtml = false;
+
+            using (var smtp = new SmtpClient())
+            {
+                var credential = new NetworkCredential
+                {
+                    UserName = "testcapstonetest@gmail.com",  // replace with valid value
+                    Password = "qeadzc1!"  // replace with valid value
+                };
+                smtp.Credentials = credential;
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.EnableSsl = true;
+                smtp.Send(message);
+                //smtp.SendMailAsync(message);
+                //return RedirectToAction("Sent");
+            }
+
+            return View();
+        }
 
         // GET: Orders/Edit/5
         public ActionResult Edit(int? id)
