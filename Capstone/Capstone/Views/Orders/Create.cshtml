@@ -181,21 +181,25 @@
                         <span class="input-group">
                             <label for="smFormGroupInput" class="col-sm-10 col-form-label col-form-label-sm">Clip Type:</label>
                             @Html.DropDownList("ClipType", new List<SelectListItem>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "SL - Slotted Clip", Value = "SL"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                       new SelectListItem {Text = "AL - Alligator Clip", Value = "AL"}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   })
+                            {
+                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL" },
+                           new SelectListItem {Text = "SL - Slotted Clip", Value = "SL" }
+
+                            }, new {@id = "ClipType"})
+                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                             
 
 
 
                         </span>
                         <div id="Edit4" class=" InitiallyHidden">
-                            <button class="btn btn-default" type="button" id="edit">Edit Field</button>
+                            <button class="btn btn-default" type="button" id="edit" >Edit Field</button>
                         </div>
                         <div id="Add" class=" InitiallyHidden">
                             <input id="addD1" type="text" />
 
-                            <button class="btn btn-default" type="button" id="add1">Add Default</button>
+                            <button class="btn btn-default" type="button" id="add1"onclick="addNewItem()">Add Default</button>
                         </div>
 
                     </div>
@@ -297,6 +301,7 @@
 
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btn").click(function () {
@@ -313,12 +318,7 @@
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#edit").click(function () {
-                $("#Add").toggle();
-
-            });
-        });
+        $(document).ready(function () {$("#edit").click(function () {$("#Add").toggle();});});
     </script>
 
     <script type="text/javascript">
@@ -350,19 +350,10 @@
 
 <script type="text/javascript">
         $(document).ready(function () {
-            $("#add1").click(function () {
-                var newitem = $("#addD1").val(); //get the new value
-                //alert(newitem);
-                var newOption = "<option value='" + newitem + "'>" + newitem + "</option>";
-                $(newOption).insertBefore($("#ddlCity option:last")); //add new option
-                $("#ddlCity").val(newitem);
-                return false;
-            });
-
-            $('#submitbutton').click(function () {
-                window.location = 'submit';
-            });
+            $("#add1").click(function () { $("#ClipType").append($('<option>', { Value: $('#addD1').val(), Text: $('#addD1').val() })); });
         });
+        
+       
     </script>
 
 }
