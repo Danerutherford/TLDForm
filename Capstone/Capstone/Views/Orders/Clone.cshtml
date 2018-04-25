@@ -23,28 +23,9 @@
                 </div>
                 <h2>Order Form</h2>
 
-                <div class=" form-group">
-                    <div class='form-row'>
-                        <div class='form-group col-md-6'>
-                            <label for="user_title">Date</label>
-                            @Html.EditorFor(model => model.Date, "{0:yyyy-MM-dd}", new { htmlAttributes = new { @class = "form-control", @type = "date" } })
-                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
+               
 
-                    <div class='form-group col-md-6'>
-                        <label for="user_firstname">User</label>
-                        @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-                    </div>
-
-
-                    <div class='form-group col-md-6'>
-                        <label for="user_firstname">Number of Badges</label>
-                        @Html.EditorFor(model => model.NumBadge, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.NumBadge, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                    
 
             </div>
         </div>
@@ -315,7 +296,6 @@
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Submit" class="btn btn-default" />
                 <input type="submit" value="Draft" class="btn btn-default" />
-                <input type="button" value="Add Badge" id="clone" />
             </div>
         </div>
     }

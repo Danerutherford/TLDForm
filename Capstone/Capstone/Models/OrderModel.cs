@@ -15,6 +15,8 @@ namespace Capstone.Models
             Neutron = "NT";
             HolderType = "LA";
             WLocation = "WB";
+
+            Date = DateTime.Now;
            
         }
 
@@ -28,8 +30,11 @@ namespace Capstone.Models
         [Display (Name = "Date")]
         public DateTime Date { get; set; }
 
-
         
+
+
+
+
         [Display(Name = "User")]
         public string UserID { get; set; }
 
